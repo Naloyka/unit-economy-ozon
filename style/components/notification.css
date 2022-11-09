@@ -1,0 +1,35 @@
+.notifications {
+  display: flex;
+  gap: 16px;
+  align-items: center; }
+  .notifications__content {
+    display: flex;
+    width: 92px;
+    gap: 16px;
+    align-items: center; }
+  .notifications__link_unload, .notifications__link_messages, .notifications__link_bell {
+    display: block;
+    background-size: 16px;
+    background-position: center;
+    width: 18px;
+    height: 18px;
+    background-repeat: no-repeat;
+    background-image: url("../img/icon_unload.svg"); }
+  .notifications__link_messages {
+    background-image: url("../img/icon_messages.svg");
+    background-size: 17px; }
+  .notifications__link_bell {
+    background-image: url("../img/icon_bell.svg");
+    background-size: 16px;
+    background-position: center; }
+
+.notifications__link_active::after {
+  content: "";
+  display: block;
+  background-color: #FF5959;
+  background-size: 5px;
+  width: 4px;
+  height: 4px;
+  border: 1px solid white;
+  border-radius: 25%;
+  margin-left: 14px; }

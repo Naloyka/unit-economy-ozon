@@ -1,0 +1,45 @@
+.information {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: auto;
+    height: auto;
+    padding: 8px 16px;
+    border-radius: 10px;
+    background-color: #FFF7D9;
+
+    &__header {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    & .title-medium {
+        font-weight: 400;
+    }
+
+    & .text {
+        line-height: 16px;
+        font-family: "Montserrat";
+        font-size: 12px;
+    }
+
+    &__link {
+        line-height: 16px;
+        font-family: "Montserrat";
+        font-size: 12px;
+        color: #457BE5;
+        margin-left: auto;
+    }
+
+    &__icon {
+        width: 16px;
+        height: 16px;
+    }
+}

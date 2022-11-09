@@ -1,0 +1,32 @@
+.information {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: auto;
+  height: auto;
+  padding: 8px 16px;
+  border-radius: 10px;
+  background-color: #FFF7D9; }
+  .information__header {
+    display: flex;
+    align-items: center;
+    gap: 8px; }
+  .information__content {
+    display: flex;
+    flex-direction: column;
+    gap: 8px; }
+  .information .title-medium {
+    font-weight: 400; }
+  .information .text {
+    line-height: 16px;
+    font-family: "Montserrat";
+    font-size: 12px; }
+  .information__link {
+    line-height: 16px;
+    font-family: "Montserrat";
+    font-size: 12px;
+    color: #457BE5;
+    margin-left: auto; }
+  .information__icon {
+    width: 16px;
+    height: 16px; }

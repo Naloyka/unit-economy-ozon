@@ -1,0 +1,280 @@
+@font-face {
+    font-family: Circe Rounded;
+    src: url("../font/CirceRounded-Regular.ttf");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Montserrat;
+    src: url("../font/Montserrat-Regular.ttf");
+    font-weight: 400;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Circe Rounded';
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+li {
+    list-style: none;
+}
+
+button {
+    cursor: pointer;
+    display: inline-block
+}
+
+.text {
+    display: inline-block;
+    font-family: 'Circe Rounded';
+    font-weight: 400;
+    font-size: 16px;
+}
+
+// sidebar слева
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-width: 272px;
+    width: 272px;
+    height: 100%;
+    border: 1px solid #C6C6C6;
+    border-radius: 10px;
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        padding: 16px;
+    }
+}
+
+
+// Белая кнопка
+
+.sidebar__group-btn {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.white-btn {
+    cursor: pointer;
+    border-radius: 10px;
+    background-color: #fff;
+    line-height: 16px;
+    text-align: left;
+    font-size: 16px;
+    border: 1px solid #C6C6C6;
+    color: #000000;
+    width: 100%;
+    min-height: 48px;
+    margin-bottom: 16px;
+    padding-left: 12px;
+    padding-right: 12px;
+
+    &:hover {
+        transition: 0.3s;
+        -webkit-box-shadow: 0px 1px 12px -2px rgba(0, 0, 0, 0.17);
+        -moz-box-shadow: 0px 1px 12px -2px rgba(0, 0, 0, 0.17);
+        box-shadow: 0px 1px 12px -2px rgba(0, 0, 0, 0.17);
+    }
+
+    &:last-child {
+        margin-bottom: 0px;
+    }
+
+    &_active {
+        color: #457BE5;
+        border: 1px solid #457BE5;
+    }
+}
+
+// Кнопки вкладки в sidebar
+
+.sidebar__group-tab-btn {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.tab-btn {
+    background-color: white;
+    border: none;
+    border-top: 1px solid #C6C6C6;
+    padding: 8px 24px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 26px;
+    color: #457BE6;
+    text-align: left;
+    cursor: pointer;
+
+    &_active {
+        background-color: #ADDBD8;
+    }
+
+    &:hover {
+        transition: 0.3s;
+        color: #000000;
+    }
+
+    &:nth-last-child(1) {
+        border-radius: 0 0 10px 10px;
+    }
+
+}
+
+// Контент справа
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 16px;
+    max-width: 1048px;
+    height: auto;
+    border: 1px solid #C6C6C6;
+    border-radius: 10px;
+    padding: 16px;
+    overflow: hidden;
+}
+
+// Textarea
+
+.textarea {
+    border: 1px solid #B0AFAF;
+    padding: 8px 16px;
+    font-size: 16px;
+    resize: none;
+    border-radius: 10px;
+
+    &::placeholder {
+        color: #C6C6C6;
+    }
+}
+
+td, tr {
+    text-align: center;
+}
+
+// поиск
+
+.search {
+    width: 640px;
+    height: 32px;
+    padding-left: 34px;
+    padding-right: 56px;
+    border: 1px solid #B0AFAF;
+    border-radius: 10px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    background-image: url("./../img/icon_search.png");
+    background-repeat: no-repeat;
+    background-position: left 8px top 4px;
+    background-size: 20px;
+
+    &::placeholder {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 20px;
+    }
+}
+
+
+// Scroll для таблиц
+
+.wtHolder {
+    &::-webkit-scrollbar {
+        width: 5px;
+        height: 5px;
+    }
+
+    &::-webkit-scrollbar-track-piece {
+        background-color: #F6F1F1;
+    }
+
+    &::-webkit-scrollbar-thumb:vertical {
+        width: 5px;
+        height: 5px;
+        background-color: #C6C6C6;
+        scrollbar-width: none;
+    }
+
+    &::-webkit-scrollbar-thumb:horizontal {
+        height: 5px;
+        background-color: #C6C6C6;
+        border-radius: 10px;
+    }
+}
+
+// Заголовки
+@import './components/title-medium.scss';
+@import './components/close.scss';
+@import './components/info.scss';
+@import './components/add-btn.scss';
+
+// Контейнеры
+@import './components/content.scss'; // Контейнер для основного контента (после шапки, перед подвалом)
+@import './components/flex-16.scss'; // Флекс, с расстоянием 16px
+@import './components/box-16.scss'; // Контейнер, с border и отступом 16px
+
+@import './components/select-content.scss'; // Для селект с текстом
+
+// Контейнер с вкладками кнопок
+@import './components/box-tabs.scss';
+
+// Карточки статистики
+@import './components/card-statistics.scss';
+
+// Карточки метрик
+@import './components/metrics.scss';
+@import './components/metrics-add.scss';
+
+// Кнопки
+@import './components/blue-btn.scss';
+
+// Текст
+@import './components/text.scss';
+
+// Хлебные крошки
+@import './components/breadcrumb.scss';
+
+// Select
+@import './components/select.scss';
+
+// header
+@import './components/header.scss';
+@import './components/dropdown-menu.scss';
+
+// Уведомления
+@import './components/notification.scss';
+
+// Профиль
+@import './components/profile.scss';
+
+// Футер
+@import './components/footer.scss';
+
+// Блок информации желтый 
+@import "./components/information.scss";
+
+// Боковое меню-кнопка
+@import "./components/side-menu.scss"
